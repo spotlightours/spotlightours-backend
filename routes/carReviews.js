@@ -5,6 +5,6 @@ const router = express.Router();
 
 // create a new review to a tour
 
-router.post("/:carId", createReview);
+router.post("/:carId", verifyUser, createReview);
 
 export default router;
