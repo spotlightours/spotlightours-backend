@@ -9,13 +9,13 @@ import {
   getDoneBooking,
   getCancelledBooking,
 } from "../controllers/bookingController.js";
-import { verifyAdmin, verifyUser } from "../utils/verifyToken.js";
+//import { verifyAdmin, verifyUser } from "../utils/verifyToken.js";
 const router = express.Router();
 
 // create a new review to a tour
 
-router.post("/", verifyUser, createBooking);
-router.get("/:id", verifyUser, getSingleBooking);
+router.post("/", createBooking);
+router.get("/:id", getSingleBooking);
 router.get("/", getAllBooking);
 router.put("/:id", updateBooking);
 router.get("/search/getBookingCount", getBookingCount);

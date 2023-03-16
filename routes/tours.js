@@ -1,5 +1,5 @@
 import express from "express";
-import { verifyAdmin } from "../utils/verifyToken.js";
+//import { verifyAdmin } from "../utils/verifyToken.js";
 import {
   createTour,
   updateTour,
@@ -14,15 +14,15 @@ const router = express.Router();
 
 //create a new tour
 
-router.post("/", verifyAdmin, createTour);
+router.post("/", createTour);
 
 //update a tour
 
-router.put("/:id", verifyAdmin, updateTour);
+router.put("/:id", updateTour);
 
 //delete a tour
 
-router.delete("/:id", verifyAdmin, deleteTour);
+router.delete("/:id", deleteTour);
 
 //getSingle tour
 
